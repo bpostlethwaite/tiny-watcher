@@ -1,6 +1,6 @@
 {
   "name": "tiny-watcher",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A tiny wrapper around fs.watch for added, removed and changed events",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,9 @@
   "keywords": [
     "file",
     "watch",
+    "watcher",
     "directory",
-    "fs.watch",
-    ""
+    "fs.watch"
   ],
   "author": "bpostlethwaite",
   "license": "MIT",
