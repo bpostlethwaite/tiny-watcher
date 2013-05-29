@@ -44,14 +44,12 @@ module.exports = function (watchdir, filelist) {
            * If its in the dictionary and exists
            * its a change
            */
-          console.log("changed", file)
           self.emit("changed", file)
         } else {
           /*
            * If its in the dictionary and does not exist
            * its a remove. Remove from dictionary
            */
-          console.log("removed", file)
           self.emit("removed", file)
           delete have[fp]
         }
@@ -65,7 +63,6 @@ module.exports = function (watchdir, filelist) {
            * If it doesn't yet exist in the dictionary
            * but now exists in filesystem its an add.
            */
-          console.log("added", file)
           have[fp] = true
           self.emit("added", file)
 

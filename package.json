@@ -20,5 +20,8 @@
   "author": "bpostlethwaite",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "509092136351873d58c62b59ea7e48fca477b4d4"
+  "gitHead": "509092136351873d58c62b59ea7e48fca477b4d4",
+  "devDependencies": {
+    "rimraf": "~2.1.4"
+  }
 }
