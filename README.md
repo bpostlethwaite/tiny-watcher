@@ -64,7 +64,7 @@ EXAMPLE: changed total
 
 ## API
 
-### tiny
+### tiny()
 
 The main object is a function that produces watchers for a specific directory an optional set of files.
 ```javascript
@@ -74,7 +74,11 @@ var watcher = tiny("path/to/dir" [, ["list", "of", "files"]])
 ### watcher.on
 Three events, `added`, `removed` and `changed` are supported. The callback returns the filename.
 
-### watcher.kill
+### watcher.emitWatched(event)
+Cycle through all the files being monitored by the tiny-watcher instance and emit `event` events for each one.
+Useful for on-startup tasks.
+
+### watcher.close()
 Calls the base fs method [watcher.close()](http://nodejs.org/docs/latest/api/fs.html#fs_watcher_close)
 
 

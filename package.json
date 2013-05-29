@@ -1,6 +1,6 @@
 {
   "name": "tiny-watcher",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A tiny wrapper around fs.watch for added, removed and changed events",
   "main": "index.js",
   "scripts": {

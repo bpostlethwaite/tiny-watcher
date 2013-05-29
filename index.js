@@ -158,6 +158,14 @@ module.exports = function (watchdir, filelist) {
   }
 
 
+  function emitWatched (event) {
+
+    Object.keys(have).forEach (function (file) {
+
+      self.emit(event, path.basename(file))
+    })
+  }
+
 
   function close () {
     monitor.close()
@@ -165,6 +173,8 @@ module.exports = function (watchdir, filelist) {
 
 
   self.close = close
+  self.emitWatched = emitWatched
+
 
 
   return self
