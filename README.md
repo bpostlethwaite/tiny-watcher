@@ -60,8 +60,6 @@ EXAMPLE: added test
 EXAMPLE: removed test
 EXAMPLE: added total
 EXAMPLE: changed total
-EXAMPLE: added test
-EXAMPLE: removed test
 ```
 
 ## API

@@ -57,7 +57,7 @@ module.exports = function (watchdir, filelist) {
      */
 
 
-    //console.log("TINY", event, file)
+//    console.log("TINY", event, file)
 
     if (match && filelist.indexOf(file) === -1)
       return
@@ -74,11 +74,28 @@ module.exports = function (watchdir, filelist) {
 
         /*
          * If its in the dictionary and a rename event
-         * it's a "remove"
+         * it might be a remove event.
          */
-        delete have[fp]
+        fs.exists(fp, function (exists) {
 
-        self.emit("removed", file)
+          if (exists) {
+            /*
+             * If it exists it probably a rename event
+             * Emit a change
+             */
+
+            return self.emit("changed", file)
+
+          } else {
+            /*
+             * Its a remove event
+             */
+
+            self.emit("removed", file)
+
+            return delete have[fp]
+          }
+        })
 
       } else {
 
