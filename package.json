@@ -1,0 +1,24 @@
+{
+  "name": "tiny-watcher",
+  "version": "0.0.1",
+  "description": "A tiny wrapper around fs.watch for added, removed and changed events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bpostlethwaite/tiny-watcher.git"
+  },
+  "keywords": [
+    "file",
+    "watch",
+    "directory",
+    "fs.watch",
+    ""
+  ],
+  "author": "bpostlethwaite",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "509092136351873d58c62b59ea7e48fca477b4d4"
+}
